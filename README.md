@@ -35,11 +35,12 @@ Each HUB-75 connector will use the individual pins and in special cases one of t
 ## Available BOBs
 The table below shows the BOBs which are currently available in this repository, along with their status.
 
-| Category  | Name                                                     | Description                                                     | HUB-75    | Status            |
-|-----------|----------------------------------------------------------|-----------------------------------------------------------------|-----------|---------------------|
-| stepgen   | [HUB75-Differential_stepgen](HUB75-Differential_stepgen) | 3 differential stepgen channels, frequency up to 400 kHz        | 2 + 0.5   | Prototype-2 ordered | 
-| GPIO-out  | [HUB75-Sourcing_output](HUB75-Sourcing_output)           | 12 channel sourcing output (<1 kHz, 4 A per channel, 4 A total) | 2         | Prototype-2 ordered | 
-| GPIO-in   | [HUB75-Sinking_input](HUB75-Sinking_input)               | 12 channel sinking input (< 1 kHz)                              | 2         | Untested          |
+| Category  | Name                                                                        | Description                                                     | HUB-75    | Status              |
+|-----------|-----------------------------------------------------------------------------|-----------------------------------------------------------------|-----------|---------------------|
+| stepgen   | [HUB75-Differential_stepgen](HUB75-Differential_stepgen)                    | 3 differential stepgen channels, frequency up to 400 kHz        | 2 + 0.5   | Prototype-2 ordered |
+| GPIO-out  | [HUB75-Sourcing_output](HUB75-Sourcing_output)                              | 12 channel sourcing output (<1 kHz, 4 A per channel, 4 A total) | 2         | Prototype-2 ordered |
+| GPIO-in   | [HUB75-Sinking_input](HUB75-Sinking_input)                                  | 12 channel sinking input (< 1 kHz)                              | 2         | Untested            |
+| GPIO-in   | [HUB75-Sinking_input_screw_terminals](HUB75-Sinking_input_screw_terminals)  | 6 channel sinking input with screw terminals (< 1 kHz)          | 2         | Untested            |
 
 ## Connecting the BOBs to your FPGA
 On both the 5A-75B and the 5A-75E the `74HC245T` buffers are hard-wired as outputs. To be able to use the HUB-75 boards which require an input (as seen from the FPGA) some modifications on the board are required. Of both boards different versiosn exist, so the components can be at a different location on your board. Below are the locations of the buffer on a 5A-75B V6.1 (front) and 5A-75E V6.0 (back).
