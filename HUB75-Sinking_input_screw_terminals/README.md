@@ -1,5 +1,5 @@
-# HUB-75 Sinking input 
-Break-out board with 12 channel sinking input. The FPGA is galvanically separated from field power using opto-couplers.
+# HUB-75 Sinking input screw terminals
+Break-out board with 6 channel sinking input. The FPGA is galvanically separated from field power using opto-couplers.
 
 ![PCB front](images/hub75_sinking_input_front.png)
 
@@ -7,8 +7,8 @@ Break-out board with 12 channel sinking input. The FPGA is galvanically separate
 
 ## Features
 
-- 2 HUB-75 output connectors
-- 12 channel sinking output using JST connectors
+- 1 HUB-75 output connector
+- 6 channel sinking output using screw terminals
 - 5\~24 V Field power with reverse polarity protection
 - indicating LED for each output
 - indicated switching frequency 1 kHz
@@ -37,13 +37,7 @@ Let's assume that the two HUB-745 connectors on this board are connected to J15 
         {"pin": "j15:2"},
         {"pin": "j15:4"},
         {"pin": "j15:5"},
-        {"pin": "j15:6"},
-        {"pin": "j16:0"},
-        {"pin": "j16:1"},
-        {"pin": "j16:2"},
-        {"pin": "j16:4"},
-        {"pin": "j16:5"},
-        {"pin": "j16:6"}
+        {"pin": "j15:6"}
     ],
     ...
 }
@@ -79,21 +73,21 @@ The table below gives the bill of materials used for this BOB and an indication 
 
 When you order with Mouser or antohter supplier, please share a list here.
 
-| Part. number | Package   | Description                        | Datasheet | Amount | Price*  |
-|--------------|-----------|------------------------------------|-----------|--------|---------|
-| LTV827       | DIP-8     | Dual-channel opto-coupler          |           | 6      | € 0.31  |
-| AO3401A      | SOT-23    | P-Channel MOSFET, 30V              |           | 1      | € 0.25  |
-| ZENER 12V    | SOT-23    | 12V Zener diode***                 |           | 1      | € 0.05  |
-| 4.7K         | SMD 1206  | Resistor, 4.7 kOhm                 |           | 12     | € 0.03  |
-| 10K          | SMD 1206  | Resistor, 10 kOhm                  |           | 1      | € 0.03  |
-| LED          | SMD 1206  | LED, green, If > 20 mA             |           | 12     | € 0.08  |
-| CAP 15N      | SMD 1206  | Capitor, 15 nF                     |           | 1      | € 0.02  |
-| JST XH 3P    | -         | JST XH conn. 2.5 mm pitch          |           | 12     | € 0.15  |
-| DG250 3,5-2  | -         | Screw/spring terminal 2.5 mm pitch |           | 2      | € 0.22  |
-| BOX 2X8      | -         | Box header 2x8, 2.54 mm pitch      |           | 2      | € 0.16  |
-| 2N7002**     | SOT-23    | N-Channel MOSFET (current mirror)  |           | 13     | € 0.04  |
-| CL2N8-G**    | SOT-89    | LED-driver 20 mA (current mirror)  |           | 1      | € 0.39  |
-| R**          | SMD 1206  | Resistor, TBD Ohm (alternative)    |           | 12     | € 0.03  |
+| Part. number          | Package   | Description                        | Datasheet | Amount | Price*  |
+|-----------------------|-----------|------------------------------------|-----------|--------|---------|
+| LTV827                | DIP-8     | Dual-channel opto-coupler          |           | 3      | € 0.31  |
+| AO3401A               | SOT-23    | P-Channel MOSFET, 30V              |           | 1      | € 0.25  |
+| ZENER 12V             | SOT-23    | 12V Zener diode***                 |           | 1      | € 0.05  |
+| 4.7K                  | SMD 1206  | Resistor, 4.7 kOhm                 |           | 6      | € 0.03  |
+| 10K                   | SMD 1206  | Resistor, 10 kOhm                  |           | 1      | € 0.03  |
+| LED                   | SMD 1206  | LED, green, If > 20 mA             |           | 6      | € 0.08  |
+| CAP 15N               | SMD 1206  | Capitor, 15 nF                     |           | 1      | € 0.02  |
+| Phoenix_PT-1,5-3-5.0  | -         | JST XH conn. 2.5 mm pitch          |           | 6      | € 0.15  |
+| Phoenix_PT-1,5-2-3.5  | -         | Screw/spring terminal 2.5 mm pitch |           | 2      | € 0.22  |
+| BOX 2X8               | -         | Box header 2x8, 2.54 mm pitch      |           | 2      | € 0.16  |
+| 2N7002**              | SOT-23    | N-Channel MOSFET (current mirror)  |           | 7      | € 0.04  |
+| CL2N8-G**             | SOT-89    | LED-driver 20 mA (current mirror)  |           | 1      | € 0.39  |
+| R**                   | SMD 1206  | Resistor, TBD Ohm (alternative)    |           | 6      | € 0.03  |
 
 **NOTES**: 
 1. The price is based on availability in the Netherlands with a single shop for all parts. Parts might be sourced cheaper depending on your location, available sources and the time you want to wait before receiving the components.
