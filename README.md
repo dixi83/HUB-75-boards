@@ -54,7 +54,7 @@ Each buffer has 8 channels, while every HUB-75 connector has 6 individual pins. 
 The following changes have to be made to the buffers:
 * De-solder the `74HC245T` buffer, this buffer cannot be re-used because its pins are not 5 Volt tolerant when `Vcc` is 3.3 Volt.
 * Cut the trace to the pin `Vcc` (pin 20) and wire it to a 3.3V source (for example the JTAG-header). If you don't do this, a buffer configure as input will put 5 Volts on the pins of the FPGA, which will definately fry that pin or the whole board.
-* Cut the trace to the pin `DIR` (pin 20) and wire it to a GND source to configure the buffer as input.
+* Cut the trace to the pin `DIR` (pin 1) and wire it to a GND source to configure the buffer as input.
 * Replace the buffer with a buffer with 5V tolerant inputs, such as the `74LVC245` ([datasheet](https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf)).
 
 After these modifications the board might look a like this (on this particular board a single buffer has been replace, as it is a test-board for LitexCNC).
